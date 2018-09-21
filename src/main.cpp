@@ -23,6 +23,7 @@ Data: 21-05-2007
 #include "Descida.h"
 #include "SA.h"
 #include "MultiStart.h"
+#include "ILS.h"
 //---------------------------------------------------------------------------
 using namespace std;
 
@@ -144,8 +145,14 @@ int main(int argc, char* argv[])
            break;
 
     case 8: /* Iterated Local Search */
-           printf("Nao implementado\n");
-           break;
+            inicio_CPU = clock();
+            fo = SmartILS(n, s, d, fo, 1, 7, 30);
+            fim_CPU = clock();
+            printf("Solucao obtida usando ILS:\n");
+            imprime_rota(s,n);
+            printf("Funcao objetivo = %f\n",fo);
+            printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+            break;
 
     case 9: /* GRASP */
            switch(menu_GRASP()) {
