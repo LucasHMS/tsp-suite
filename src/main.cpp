@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
            printf("Solucao obtida usando a estrategia Best Improvement do Metodo da Descida:\n");
            imprime_rota(s,n);
            printf("Funcao objetivo = %f\n",fo);
-           printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+           printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
            break;
 
     case 3: /* Descida Randômica */
@@ -105,7 +105,7 @@ int main(int argc, char* argv[])
           printf("Solucao obtida usando a estrategia Randomica do Metodo da Descida:\n");
           imprime_rota(s,n);
           printf("Funcao objetivo = %f\n",fo);
-          printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+          printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
           break;
 
     case 4: /* Descida com primeiro de melhora */
@@ -115,7 +115,7 @@ int main(int argc, char* argv[])
           printf("Solucao obtida usando a estrategia primeiro de melhora do Metodo da Descida:\n");
           imprime_rota(s,n);
           printf("Funcao objetivo = %f\n",fo);
-          printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+          printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
           break;
 
     case 5: /* Multi-Start */
@@ -125,7 +125,7 @@ int main(int argc, char* argv[])
             printf("Solucao obtida usando Multi-Start:\n");
             imprime_rota(s,n);
             printf("Funcao objetivo = %f\n",fo);
-            printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+            printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
             break;
 
     case 6: /* Simulated Annealing */
@@ -137,7 +137,7 @@ int main(int argc, char* argv[])
             imprime_rota(s,n);
             printf("tempretura inicial = %f\n", temp_inicial);
             printf("Funcao objetivo = %f\n",fo);
-            printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+            printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
             break;           
 
     case 7: /* Busca Tabu */
@@ -151,7 +151,7 @@ int main(int argc, char* argv[])
             printf("Solucao obtida usando ILS:\n");
             imprime_rota(s,n);
             printf("Funcao objetivo = %f\n",fo);
-            printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+            printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
             break;
 
     case 9: /* GRASP */
@@ -197,7 +197,7 @@ int main(int argc, char* argv[])
         printf("Solucao obtida usando a estrategia Best Improvement do Metodo da Descida (vizinhanca adjacente):\n");
         imprime_rota(s,n);
         printf("Funcao objetivo = %f\n",fo);
-        printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+        printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
         break;
 
     case 16: /* Descida Randômica (vizinhanca adjacente)*/
@@ -207,7 +207,7 @@ int main(int argc, char* argv[])
         printf("Solucao obtida usando a estrategia Randomica do Metodo da Descida (vizinhanca adjacente):\n");
         imprime_rota(s,n);
         printf("Funcao objetivo = %f\n",fo);
-        printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+        printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
         break;
 
     case 17: /* Descida com primeiro de melhora (vizinhanca adjacente) */
@@ -217,7 +217,7 @@ int main(int argc, char* argv[])
           printf("Solucao obtida usando a estrategia primeiro de melhora do Metodo da Descida:\n");
           imprime_rota(s,n);
           printf("Funcao objetivo = %f\n",fo);
-          printf("Tempo de CPU = %f segundos:\n",(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+          printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
           break;
 
     default:
