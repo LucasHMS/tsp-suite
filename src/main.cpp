@@ -24,6 +24,7 @@ Data: 21-05-2007
 #include "SA.h"
 #include "MultiStart.h"
 #include "ILS.h"
+#include "BT.h"
 //---------------------------------------------------------------------------
 using namespace std;
 
@@ -141,8 +142,14 @@ int main(int argc, char* argv[])
             break;           
 
     case 7: /* Busca Tabu */
-           printf("Nao implementado\n");
-           break;
+            inicio_CPU = clock();
+            fo = BT(n, s, d, 7, 30);
+            fim_CPU = clock();
+            printf("Solucao obtida usando Busca Tabu:\n");
+            imprime_rota(s,n);
+            printf("Funcao objetivo = %f\n",fo);
+            printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+            break;
 
     case 8: /* Iterated Local Search */
             inicio_CPU = clock();
