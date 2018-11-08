@@ -25,6 +25,7 @@ Data: 21-05-2007
 #include "MultiStart.h"
 #include "ILS.h"
 #include "BT.h"
+#include "AG.h"
 //---------------------------------------------------------------------------
 using namespace std;
 
@@ -181,11 +182,23 @@ int main(int argc, char* argv[])
     case 12: /* Algoritmos Geneticos */
            switch(menu_AG()) {
            case 1: /* Algoritmos Geneticos usando operador OX */
-                 printf("Nao implementado\n");
-                 break;
+                inicio_CPU = clock();
+                fo = AG(n, s, d, 100, 0.02, 0.85, 0.15, 1);
+                fim_CPU = clock();
+                printf("Solucao obtida usando AG com operador OX:\n");
+                imprime_rota(s,n);
+                printf("Funcao objetivo = %f\n",fo);
+                printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+                break;
            case 2: /* Algoritmos Geneticos usando operador ERX */
-                 printf("Nao implementado\n");
-                 break;
+                inicio_CPU = clock();
+                fo = AG(n, s, d, 100, 0.02, 0.85, 0.05, 2);
+                fim_CPU = clock();
+                printf("Solucao obtida usando AG com operador ERX:\n");
+                imprime_rota(s,n);
+                printf("Funcao objetivo = %f\n",fo);
+                printf("Tempo de CPU = %f segundos\n",(double)(fim_CPU - inicio_CPU)/CLOCKS_PER_SEC);
+                break;
            }
            break;
 
